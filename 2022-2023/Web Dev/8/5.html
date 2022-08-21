@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select id="lista">
+        <option value="Ameryka Pół">Ameryka Pół</option>
+        <option value="Ameryka Poł">Ameryka Poł</option>
+        <option value="Afryka">Afryka</option>
+        <option value="Australia">Australia</option>
+        <option value="Azja">Azja</option>
+        <option value="Europa">Europa</option>
+        <option value="Antarktyda">Antarktyda</option>
+    </select>
+    <script>
+        
+        const lista = document.getElementById("lista")
+        const wynik = document.createElement("div")
+
+        const apoln = `Denali, 6195m n.p.m. <br> <img src="./denali.png">`
+        const apolu = `Aconcagua, 6961m n.p.m. <br> <img src="./Aconcagua.png">`
+        const afryka = `Wulkan Kibo, 5895m n.p.m. <br> <img src="./Kibo.png">`
+        const australia = `Góra Kościuszki, 2230m n.p.m. <br> <img src="./kosciuszka.png">`
+        const azja = `Mount Everest, 8848m n.p.m. <br> <img src="./mount everest.png">`
+        const europa = `Elbrus, 5642m n.p.m. <br> <img src="./elbrus.png">`
+        const antarktyda = `Masyw Vinsona, 4892m n.p.m. <br> <img src="./masyw.png">`
+
+
+        document.body.appendChild(wynik)
+        lista.addEventListener('change', () => {
+            wynik.innerHTML = `Wybrano: ${lista.value}. <br>Najwyższy szczyt: `
+
+            switch (lista.value) {
+                case "Ameryka Pół":
+                    wynik.innerHTML += apoln
+                    break;
+                case "Ameryka Poł":
+                    wynik.innerHTML += apolu
+                    break;
+                case "Afryka":
+                    wynik.innerHTML += afryka
+                    break;
+                case "Australia":
+                    wynik.innerHTML += australia
+                    break;
+                case "Azja":
+                    wynik.innerHTML += azja
+                    break;
+                case "Europa":
+                    wynik.innerHTML += europa
+                    break;
+                case "Antarktyda":
+                    wynik.innerHTML += antarktyda
+                    break;
+                default:
+                    break;
+            }
+        })
+
+    </script>
+</body>
+</html>

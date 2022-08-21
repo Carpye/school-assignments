@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="font-family:monospace">
+    <script>
+        document.write(
+            '"": ' + Boolean("")
+            + ", 0: " + Boolean(0)
+            + ", null: " + Boolean(null)
+            + ", undefined: " + Boolean(undefined)
+            + ", abc: " + Boolean("abc")
+            + ", ,: " + Boolean(",")
+            + ', " ": ' + Boolean(" ")
+            + ", 7: " + Boolean(7)
+            + ", -45: " + Boolean(-45)
+        );
+    </script>
+</body>
+</html>
+
+<!-- Zbadaj wartość logiczną wyrażeń: "",0,null,undefined,"abc"," ",7,-45
+
+POMOC:
+Do wyświetlania wykorzystaj instrukcję document.write().
+Teksty, liczby, wyrażenia zwracają wartość logiczną
+true lub false jeśli są "sprawdzane jako wyrażenia logiczne".
+Warto wiedzieć jakie wartości są zwracane.
+!! czyli podwójne zaprzeczenie zwraca wartość logiczną danego wyrażenia. -->

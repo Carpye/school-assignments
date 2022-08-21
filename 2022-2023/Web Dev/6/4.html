@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Wpisz ocenę.</h2>
+    <input type="number">
+    <button onclick="ocena()" >Zatwierdź</button>
+    <div id="oceny"></div>
+
+
+
+    <script>
+        const number = document.querySelector("input");
+        const oceny = document.querySelector("div");
+        let xd = "";
+
+        function ocena(){
+            const e = parseInt(number.value)
+
+            switch (e) {
+                case 1: xd = "Ocena Niedostateczna."
+                    break;
+                case 2: xd = "Ocena Dopuczająca"
+                    break;
+                case 3: xd = "Ocena Dostateczna"
+                    break;
+                case 4: xd = "Ocena Dobra"
+                    break;
+                case 5: xd = "Ocena Bardzo Dobra"
+                    break;
+                case 6: xd = "Ocena Celująca"
+                    break;
+                default: xd = "Podałeś liczbę spoza zakresu ocen."
+                    break;
+            }
+            oceny.innerText = xd;
+        }
+
+    </script>
+</body>
+</html>
+<!-- 
+Napisz kod, który dla zdefiniowanej szkolnej oceny (1,2,3,4,5,6) lub pobranej od użytkownika w formie liczby, wypisze jej opis słowny np. dostateczny. Informacja ma być wypisana w div-ie id="oceny". Jeśli użytkownik poda ocenę z poza zakresu poinformuj go o tym.
+
+POMOC:
+Należy skorzystać z instrukcji switch, która porównuje wartość zadaną
+z przypadkami case{}, które ma zdefiniowane, jeśli wartość zadana spełnia, 
+któryś z warunków wykonywany jest dany fragment kodu. 
+Jeśli nie jest spełniony żaden z warunków, wykonywany jest kod deafult{}
+-->

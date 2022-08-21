@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang=pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+    
+    </style>
+</head>
+<body>
+    <p id="osoby"></p>
+    <div class="container"></div>
+    
+
+    <script>
+        const container = document.querySelector(".container");
+        const info_personal = ["Kacper Kozłowski", "Kajetan Pawlak","Krzysztof Godyń", "Misha Aksonov","Mikołaj Szlosowski"];
+        document.querySelector("#osoby").innerHTML = info_personal.join(", ");
+        
+        
+        for(item of info_personal){
+            container.innerHTML+= `<p> ${item} </p>` ;
+            
+        }
+    </script>
+</body>
+</html>
+
+
+
+<!-- ZAD1 
+Zdefiniuj tablicę, która będzie zawierała imiona i nazwiska Twoje i 4 kolegow z klasy. Na początku tablicy twoje imie i nazwisko.
+
+Wyświetl elementy tablicy na stronie html w jedenj lini rozdzielone przecinakmi. Poniżej wyświetl jej elementy w kolejnych akapitach.
+
+POMOC:
+Do łączenia elementów tablicy w jeden element stosujemy metode
+join(). Jako argument podajemy symbol, znak, znacznik html itp. którym mają być rozdzielone elementy. -->

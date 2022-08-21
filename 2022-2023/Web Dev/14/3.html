@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const x = Number(prompt("Wpisz promień"));
+        function circleField() {
+            if (x > 0) {
+                const field = Math.PI * Math.pow(x, 2);
+                const circuit = Math.PI * x * 2;
+
+                return `Pole koła wynosi: ${field} <br>
+                Obwód koła wynosi: ${circuit}`;
+            }
+        }
+        document.write(circleField());
+    </script>
+</body>
+</html>
+<!-- Napisz program, który dla podanego promienia >0 oblicza pole koła i jego obwód. Do pobrania danych od użytkownika wykorzystaj okno dialogowe.
+
+POMOC:
+W zadaniu zastosuj metody: 
+prompt()
+Number()
+Math.pi()
+Math.pow() -->

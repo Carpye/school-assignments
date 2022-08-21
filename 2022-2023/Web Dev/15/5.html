@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funkcja falowa</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #f8f8f8;
+            background-image: url("./bg1.png");
+            background-size: 100vw;
+            height: 100vh;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            letter-spacing: .2px;
+        }
+        .flex{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .wrapper{
+            background: rgba(255, 255, 255, 0.317);
+            backdrop-filter: blur(3px);
+            min-width: 600px;
+            min-height: 800px; 
+            border-radius: 15px;
+            padding: 0 20px 20px 20px;
+            flex-direction: column;
+            justify-content: start;
+            position: relative;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.264);
+        }
+        .wrapper h1{
+            margin-bottom: 50px;
+            background: rgb(253, 253, 253);
+            color: #8800ff;
+            padding: 20px 20px 20px 20px;
+            /* box-shadow: 0 5px 10px rgba(0, 0, 0, 0.13); */
+            border-radius: 0 0 15px 15px;
+            position: relative;
+        }
+        .wrapper h1::before{
+            content: "";
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            width: calc(100% + 20px);
+            height: 20px;
+            background: white;
+            border-radius: 25px 40px 0 0 / 15px 25px 0 0 ;
+            background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.342), transparent 60%);
+        }
+        #result{
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 300px;
+            background: #9c2bff;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.264);
+        }
+        button{
+            padding: 20px;
+            border-radius: 15px;
+            background: #9c2bff;
+            color: white;
+            font-size: 2em;
+            letter-spacing: 2px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.264);
+            margin-top: 100px;
+            width: 50%;
+            border: none;
+        }
+        .main-wrapper{
+            position: relative;
+        }
+        .behind{
+            position: absolute;
+            top: 0;
+            left: 0;
+            left: 48px;
+            background: white;
+            width: 100px;
+            height: 40px;
+            border-radius: 0 0 0 10px;
+        }
+    </style>
+</head>
+<body class="flex">
+    <div class="main-wrapper">
+        <div class="behind"></div>
+        <div class="wrapper flex">
+            <h1>Funkcja falowa (funkcja psi)</h1>
+            <div>
+                <label for="A">Amplituda</label>
+                <input type="number" name="A" id="A" value="1">
+                <br>
+                <label for="v">Częstotliwość</label>
+                <input type="number" name="v" id="v" value="1">
+                <br>
+                <label for="t">Czas</label>
+                <input type="number" name="t" id="t" value="1">
+                <br>
+                <label for="k">Liczba falowa</label>
+                <input type="number" name="k" id="k" value="1">
+                <br>
+                <label for="x">Współrzędna x</label>
+                <input type="number" name="x" id="x" value="1">
+            </div>
+            <br>
+            <button onclick="handleClick()">Oblicz</button>
+            <div id="result"></div>
+        </div>
+    </div>
+
+
+    <script>
+
+        function handleClick() {
+            const A = document.getElementById('A').value;
+            const v = document.getElementById('v').value;
+            const t = document.getElementById('t').value;
+            const k = document.getElementById('k').value;
+            const x = document.getElementById('x').value;
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = psi(A,v,t,k,x);
+        }
+
+        function psi(A,v,t,k,x) {
+            return A * Math.cos(2 * Math.PI * v * t - k * x);
+        }
+        //write a function that returns the value of the psi function
+        //for a given time t and position x
+        //the function should be defined as follows:
+        //ψ(t,x) = A * cos(2pi * vtkx)
+        //where A - amplitude, v - frequency, t - time, k - wave number, x - position
+        //the function should return a number
+        //the function should be called as follows:
+        //ψ(t,x) = psi(A,v,t,k,x)
+        //where A, v, t, k, x are numbers
+        //the function should return a number
+        //the function should be called as follows:
+    </script>
+</body>
+</html>
+
+<!-- Przygotuj własną funkcję, która oblicza jakieś ciekawe zadanie matematyczne (rozwiązuje jakiś matematyczny problem) według zadanego wzoru. Wyniki i ewentualne dane wyświetl i pobierz za pomocą internetowej przeglądarki i atrakcyjnie sformatuj. -->

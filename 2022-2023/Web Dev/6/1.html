@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4>Wpisz liczbę</h4>
+    <input type="number">
+    <input type="submit" onclick="sprawdz()" value="Sprawdź">
+    <div id="opis">
+
+    </div>
+
+
+
+
+    <script>
+        let liczba = document.querySelector("input");
+        let opis = document.querySelector("div");
+
+        function sprawdz(){
+
+            if (liczba.value > 0){
+                opis.innerHTML = "<h1>Liczba więszka od zera.</h1>"
+            }
+            else{
+                opis.innerHTML = "<h1>Zero lub liczba ujemna.</h1>"
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+<!-- Pobierz od użytkownika liczbę. Jeśli będzie dodatnia w div-ie z id="opis" ma się wyświetlić tekst "Liczba większa od zera." napisany jako nagłówek 1 stopnia. Jeśli nie ma się pokazać np. tekst: "Zero lub liczba ujemna.".
+
+POMOC:
+Do pobrania liczby użyj instrukcji prompt().
+Do sprawdzenia zastosuj instrukcje warunkowa if else. -->
