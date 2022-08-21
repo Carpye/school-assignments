@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* zmienna kolor tla dostepna dla wszystkich elementow */
+
+:root{
+    --bg-color: darkgrey;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #000;
+    color: white;
+    font-size: 2em;
+    font-family:Arial, Helvetica, sans-serif;
+}
+    /* styl dla wszystkich blokow */
+.block{
+    width: 400px;
+    height: 400px;
+    transition: .5s;
+    text-align: center;
+}
+    /* zielony kwadrat */
+.b1{
+    background: green;
+}
+    /* zielony kwadrat po najechaniu */
+.b1:hover{
+    background: lightblue;
+}
+    /* zielony kwadrat po kliknieciu */
+.b1:active{
+    background: blue;
+}
+    /* czerwony kwadrat */
+.b2{
+    background: red;
+}
+
+    /* lista w czerwonym kwadracie */
+.b2 .lista{
+    list-style-type: none;
+}
+    /* pierwszy elemment listy */
+.b2 .lista li:first-child{
+    color: rgb(0, 255, 170);
+}
+    /* trzeci element listy */
+.b2 .lista li:nth-child(3){
+    color: yellowgreen;
+}
+    /* ostatni element listy */
+.b2 .lista li:last-child{
+    color: blueviolet;
+}

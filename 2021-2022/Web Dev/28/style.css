@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?	family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border-radius: 0 0 25px 25px;
+}
+
+body{
+    background: rgb(99, 177, 164);
+    font-family: 'Lato', sans-serif;
+    font-size: 2rem;
+}
+
+header{
+    background: rgb(2, 94, 180);
+    width: 100%;
+    min-height: 100px;
+    box-shadow: 0 0 15px rgba(0,0,0,.5);
+    z-index: 10;
+    text-align: center;
+}
+
+nav{
+    background: rgb(14, 172, 132);
+    width: 80%;
+    margin-inline: auto;
+    min-height: 50px;
+    box-shadow: 0 5px 5px 0 rgba(0,0,0,.5);
+    text-align: center;
+}
+
+.wrapper{
+    width: 100%;
+    height: calc(100vh - 50px - 100px - 100px);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+section{
+    background: rgb(207, 249, 255);
+    box-shadow: 0 0 15px rgba(0,0,0,.5);
+    width: 400px;
+    min-height: 100px;
+    padding: 10px;
+    font-size: 0.6em;
+    border-radius: 25px;
+}
+
+section h1{
+    margin-top: 0;
+}
+
+footer{
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    min-height: 100px;
+    width: 100%;
+    background: rgb(55, 138, 172);
+    box-shadow: 0 0 15px rgba(0,0,0,.5);
+}
+
+.wrapper section:nth-child(1){
+    background: rgb(163, 255, 228);
+}
+.wrapper section:nth-child(2){
+    background: rgb(163, 226, 255);
+}

@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?	family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Lato, sans-serif;
+}
+
+header{
+    width: 100%;
+    min-height: 50px;
+    font-style: italic;
+    text-align: center;
+    font-size: 3em;
+    margin-bottom: 40px;
+}
+
+.wrap{
+    display: flex;
+}
+
+
+nav{
+    width: 400px;
+    min-height: 300px;
+    max-height: calc(77px * 4);
+    background: rgb(204, 204, 204);
+    margin: 0 0 0 40px;
+}
+
+nav a{
+    display: block;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    color: inherit;
+    text-decoration: none;
+    background: rgb(179, 179, 179);
+    font-size: 2em;
+}
+
+nav a:hover{
+    background: rgba(255, 255, 255, 0.1);
+}
+
+section{
+    width: 70%;
+    margin-inline: auto;
+    padding: 60px;
+    background: rgb(185, 185, 185);
+}
+
+@media only screen and (max-width: 1600px){
+    section{
+        margin: 40px auto;
+        width: 80%;
+    }
+
+    nav{
+        margin-inline: auto;
+        width: 70%;
+        min-height: 50px;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    nav a{
+        display: inline-block;
+        width: 100%;
+    }
+
+    .wrap{
+        display: initial;
+    }
+
+    header{
+        font-size: 2.5em;
+    }
+
+    @media only screen and (max-width: 760px){
+        header{
+            font-size: 1.8em;
+            margin: 20px 0;
+        }
+
+        nav{
+            font-size: .75em;
+        }
+    }
+}

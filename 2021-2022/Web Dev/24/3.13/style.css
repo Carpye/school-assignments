@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: rgb(53, 54, 110);
+    overflow: hidden;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.wrap{
+    background: rgb(75, 23, 143,.6);
+    width: 500px;
+    height: 500px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    box-shadow: 0 0 15px black;
+}
+
+main img{
+    border: 2px solid rgb(0, 0, 0);
+    position: absolute;
+    width: 40%;
+    box-shadow: 0 0 15px black;
+}
+
+.wrap2{
+    width: 400px;
+    height: 400px;
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+.wrap img:nth-child(1){
+    transform: translate(20px, 20px);
+    z-index: 1;
+}
+
+.wrap img:nth-child(2){
+    transform: translate(40px, 40px);
+    z-index: 2;
+}
+
+.wrap img:nth-child(3){
+    transform: translate(60px, 60px);
+    z-index: 3;
+}
+
+.wrap img:nth-child(4){
+    transform: translate(80px, 80px);
+    z-index: 4;
+}
+
+.like{
+    position: absolute;
+    filter:drop-shadow(0 0 3px black);
+    animation: rotateA 1s linear infinite, size 5s linear infinite;
+}
+
+@keyframes rotateA {
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+
+@keyframes size {
+    0%,100%{width: 20%;}
+    50%{width: 5%;}
+}
