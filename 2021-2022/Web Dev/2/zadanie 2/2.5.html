@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="wpisz tekst">
+    <input type="number" placeholder="wpisz liczbe">
+    <button>Click</button><br>Sprawdź czy w zależności od tego czy wpisany jest tekst czy liczba, zmienia się typ danych pobierany z pola inputów.
+    <script>
+        const text = document.querySelector('input[type="text"]');
+        const number = document.querySelector('input[type="number"]');
+        const button = document.querySelector('button');
+
+        button.addEventListener('click', function() {
+            console.log("1 input: " + typeof text.value);
+            console.log("2 input: " + typeof number.value);
+            console.log("aby pobrać liczbę z pola input należy wpisać parseInt(number.value), parseFloat(), lub Number()");
+            console.log("Liczba po sparsowaniu: " + typeof parseInt(number.value));
+        }
+        );
+        
+    </script>
+</body>
+</html>

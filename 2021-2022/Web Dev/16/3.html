@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Podaj rok urodzenia
+    <input type="number"><button>Calculate</button>
+    <script>
+        
+
+
+
+        const uczen = {
+            imie: 'Kacper',
+            nazwisko: 'Kozłowski',
+            rok: 2006,
+            wiekUcznia: function() {
+                const date = new Date();
+                return Number(date.getFullYear()) - this.rok;
+            }
+        }
+
+        const btn = document.querySelector('button');
+        const input = document.querySelector('input');
+        btn.addEventListener('click', function() {
+            uczen.rok = input.value;
+            if (uczen.wiekUcznia() <= 0 || uczen.wiekUcznia() >= 110) {
+                alert('obsługiwany zakres wieku to od 0 do 110 lat. Podaj prawidłowy wiek');
+            }else{
+                let wiek = uczen.wiekUcznia();
+                console.log(wiek);
+                switch (wiek) {
+                    case 1:
+                        wiek += " rok"
+                        break;
+                    case 2:
+                    case 3:
+                    case 4:
+                        wiek += " lata"
+                        break;
+                    default:
+                        wiek += " lat"
+                        break;
+                }
+                console.log(`Wiek ucznia: ${wiek}`);
+            }
+        });
+
+        
+    </script>
+</body>
+</html>

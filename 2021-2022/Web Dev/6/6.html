@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<input type="number">
+    <button onclick="xd()">click</button>
+    <script>
+        function xd(){
+            const number = document.querySelector("input").value;
+            number === "" ? console.log("wpisz liczbę!!!") : !Number(number) ? console.log("Zero") : console.log("Liczba różna od zera");
+        }
+    </script>
+</body>
+</html>
+
+
+<!-- Napisz skrypt, który dla 0, wypisze w konsoli tekst "Zero", dla innych liczb tekst "Liczba różna od zera".
+
+POMOC:
+Wykorzystaj to, że wartość logiczna liczby 0 wynosi false.
+Jesli uzywasz instrukcji prompt() do pobrania liczby od uzytkownika, 
+to musisz dokonac konwersji, bo inaczej to co wpisze uzytkownik będzie traktowane 
+jako łańcuch znaków, a nie jako liczba!!!
+Konwersji możesz dokonać np. z pomocą instrukcji Number() -->

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>
+        <div class="div1"></div>
+        <div class="div2"></div>
+    </h3>
+    <script>
+        const text = "Twórcą języka JavaScript (w skrócie JS) – jest Brendan Eich.";
+        document.querySelector(".div1").textContent = text;
+        document.querySelector(".div2").textContent = text.replace("Twórcą", "Autorem");
+    </script>
+</body>
+</html>
+
+<!-- Tekst z cw1 wypisz do div-a i umieść w znaczniku <h3>. Słowo Twórcą zamień na Autorem. Do kolejnego div'a ponownie wypisz tekst. 
+
+POMOC:
+Metoda replace() zamienia podany tekst (1 argument), na podany tekst (2 argument). -->

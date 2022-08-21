@@ -1,0 +1,11 @@
+Czy kod JS jest calkowicie jawny dla uzytkownika?
+> Odp. nie
+
+Jaka jest podstawowa roznica miedzy php a js?
+> Odp. PHP jako "program" wykonuje się na serwerze a na lokalnym komputerze wyświetla się tylko efekt jego działania. JavaScript natomiast wykonuje program na komputerze lokalnym.
+
+Dlaczego programu zegara odliczajacego czas nie nalezy pisac w PHP?
+> Odp. bo php wykonuje sie po stronie serwera i bedzie brac date z serwera zamiast daty z komputera uzytkownika
+
+Podaj inny przyklad zastosowania JS (niz zegar) na sronie www.
+> Odp. tworzenie interaktywnych elementow strony

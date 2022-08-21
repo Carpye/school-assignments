@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+	<title>Zegar</title>
+</head>
+<body>
+    <div id="zegar"></div>
+    <script>
+        function odliczanie(){
+            const dzisiaj = new Date()
+            const dzien = dzisiaj.getDate()
+            const miesiac = dzisiaj.getMonth()+1
+            const rok = dzisiaj.getFullYear()
+            let godzina = dzisiaj.getHours()
+            if (godzina<10) godzina ="0"+godzina
+            let minuta = dzisiaj.getMinutes()
+            if (minuta<10) minuta = "0"+minuta
+            let sekunda = dzisiaj.getSeconds()
+            if (sekunda<10) sekunda="0"+sekunda
+            document.getElementById("zegar").innerHTML = 
+            dzien+" / "+miesiac+" / "+rok+" | "+godzina+":"+minuta+":"+sekunda
+            setTimeout("odliczanie()",1000)
+        }
+        odliczanie()
+    </script>
+</body>
+</html>

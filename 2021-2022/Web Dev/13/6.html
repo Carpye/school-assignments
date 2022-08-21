@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="div1"></div>
+    <div class="div2"></div>
+    <script>
+        const text = "Twórcą języka JavaScript (w skrócie JS) – jest Brendan Eich.";
+        document.querySelector(".div1").innerHTML = `<h3>${text}</h3>`;
+        document.querySelector(".div2").innerHTML = `słowo JavaScript zaczyna się od ${text.indexOf("JavaScript")} znaku.`;
+    </script>
+</body>
+</html>
+ <!-- Tekst z cw1 wypisz do div-a i umieść w znaczniku <h3>. Poniżej do nowego div-a, wypisz: słowo JavaScript zaczyna się od ... znaku.
+
+POMOC:
+Metoda indexOf() zwraca informację, od którego znaku zaczyna się tekst
+podany jako argument. -->
